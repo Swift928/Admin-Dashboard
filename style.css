@@ -1,0 +1,232 @@
+:root {
+   --background-color: rgb(181, 181, 147);
+   --auxiliary-color-1:  rgb(68, 71, 20);
+   --logo-background-color: var(--auxiliary-color-1);
+   --auxiliary-color-2: rgb(190, 194, 188);
+   --auxiliary-color-3: whitesmoke;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-weight: 700; */
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 150px 5fr;
+    height: 100vh;
+
+}
+
+.header {
+    grid-column: 2/-1;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    padding-left: 40px;
+    padding-bottom: 15px;
+    background-color: var(--background-color);
+}
+
+.greetings {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+    grid-column: -7/-4;
+}
+
+.greetings-text > * {
+    margin: 0;
+}
+
+.greetings > #Capa_1 {
+    height: 50px;
+    width: auto;
+    fill: #ff0000;
+    background-color: var(--logo-background-color);
+    border-radius: 50%;
+}
+
+.greetings-text > *:last-child {
+    font-size: 25px;
+}
+
+
+form {
+    grid-column: 1/4;
+    display: flex;
+    align-items: center;
+    height: initial;
+    gap: 20px;
+}
+
+form > input {
+    flex:1;
+    background-color: var(--auxiliary-color-2);
+    outline: none;
+    border-radius: 25px;
+    height: 30px;
+}
+
+.search-bar button  {
+    background-color: transparent;
+    border: none;
+}
+
+#search-svg{
+    height: 30px;
+    width: auto;
+}
+
+#bell-svg {
+    height: 25px;
+    width: auto;
+}
+
+.header-buttons {
+    grid-column: 4/7;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+}
+
+.header-buttons > * {
+    padding: 10px 20px;
+    border-radius: 35px;
+    width: 125px;
+    background-color: var(--auxiliary-color-1);
+    color: var(--auxiliary-color-3);
+    border-style: none;
+    font-size: 16px;
+}
+
+.notification-section {
+    grid-column: 5/7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.notification-section > #Capa_1 {
+    height: 35px;
+    width: auto;
+    fill: #ff0000;
+    background-color: var(--logo-background-color);
+    border-radius: 50%;
+}
+
+#home-svg,
+#profile-svg,
+#message-svg,
+#history-svg,
+#tasks-svg,
+#community-svg,
+#settings-svg,
+#support-svg,
+#privacy-svg{
+    height: 25px;
+    width: auto;
+    fill: var(--auxiliary-color-3);
+}
+
+.sidebar {
+    display: grid;
+    align-content: start;
+    gap: 20px;
+    padding: 20px;
+    grid-row: 1/3;
+    background-color: var(--auxiliary-color-1);
+    color: var(--auxiliary-color-3);
+    
+}
+
+.sidebar ul {
+    display: grid;
+    font-size: 25px;
+    gap: 15px;
+    padding-left: 10px;
+    list-style: none;
+}
+
+.sidebar h2 {
+    font-size: 35px;
+    margin: 0;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#dashboard-svg {
+    height: 40px;
+    width: auto;
+    fill: var(--auxiliary-color-3);
+}
+
+.sidebar ul li {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr ;
+    background-color: var(--auxiliary-color-2);
+    gap: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.projects > div {
+    border: 1px black solid;
+    border-radius: 7px;
+    background: linear-gradient(to right, #ff0000, #ff0000 2%, transparent 2%);
+    background-color: var(--background-color);
+    padding: 30px;
+    padding-top: 0;
+}
+
+.side-projects > div {
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 30px;
+    background-color: var(--background-color);
+    min-width: 150px;
+}
+
+.side-projects div > p:not(:last-child)::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid black;
+    margin-right: -5px;
+    margin-left: -5px;
+    padding-top: 16px;
+}
+
+.projects-headline {
+    grid-column: 1/-1;
+    margin-bottom: 0;
+}
